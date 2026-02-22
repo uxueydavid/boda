@@ -23,7 +23,6 @@
             --taupe: #a89885;
             --shadow: rgba(0, 0, 0, 0.05);
         }
-
         body {
             font-family: 'Inter', sans-serif;
             background: var(--light);
@@ -138,18 +137,6 @@
             padding: 5rem 2rem;
             background: white;
             position: relative;
-        }
-
-        .countdown-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 1px;
-            background: var(--accent);
-            opacity: 0.3;
         }
 
         .section-title {
@@ -495,15 +482,14 @@
         }
 
         /* Couple Photo in Hero */
-        .couple-photo-hero {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-            animation: fadeInUp 1s ease-out 0.6s both;
-            z-index: 1;
-        }
+		.couple-photo-hero {
+			width: min(985vw, 620px);
+			height: auto;
+			border-radius: 14px;
+			box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+			animation: fadeInUp 1s ease-out 0.6s both;
+			z-index: 1;
+		}
 
         /* IBAN Section */
         .iban-section {
@@ -614,7 +600,7 @@
             <p class="date">03 DE OCTUBRE DE 2026</p>
         </div>
         <!-- Imagen de los novios -->
-        <img src="hero.png" alt="Uxue y David" class="couple-photo-hero">
+        <img src="hero.jpeg" alt="Uxue y David" class="couple-photo-hero">
         <div class="scroll-indicator"></div>
     </section>
 
@@ -753,11 +739,11 @@
                 <div class="location-icon">🚌</div>
                 <h3 class="location-title">Puntos de Recogida</h3>
                 <div class="location-address">
-                    <p><strong>Plaza Moyua</strong></p>
-                    <p>Salida: 11:00</p>
+                    <p><strong>Parada 1</strong></p>
+                    <p>Salida: ??:??</p>
                     <br>
-                    <p><strong>Rekalde</strong></p>
-                    <p>Parada: 11:20</p>
+                    <p><strong>Parada 2</strong></p>
+                    <p>Parada: ??:??</p>
                     <br>
                     <p style="font-size: 0.9rem; opacity: 0.8;">
                         El bus os llevará directamente al restaurante. 
@@ -820,6 +806,58 @@
 					✓ IBAN copiado al portapapeles
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<!-- Extras / Guía de Invitados (Opcional) -->
+	<section class="extras-section" style="padding:5rem 2rem; background:var(--beige);">
+		<h2 class="section-title">⭐ Ideas & 🎯 Curiosidades</h2>
+
+		<!-- Curiosidades -->
+		<div class="curiosities" style="max-width:800px; margin:2rem auto; text-align:center;">
+			<p style="font-size:1rem; line-height:1.6; margin-bottom:1rem;">David siempre llega tarde <span style="font-size:1.2rem;">😅</span></p>
+			<p style="font-size:1rem; line-height:1.6; margin-bottom:1rem;">Uxue organizó el viaje donde empezó todo</p>
+			<p style="font-size:1rem; line-height:1.6; margin-bottom:1rem;">El restaurante lo elegimos por las vistas… y por la comida</p>
+		</div>
+
+		<!-- Guía para invitados de fuera -->
+		<h3 class="section-title" style="font-size:1.8rem; margin-top:3rem;">🗺️ Guía para invitados de fuera</h3>
+		<div class="guide-container" style="max-width:900px; margin:2rem auto; display:grid; gap:2rem;">
+
+			<!-- Dónde dormir -->
+			<div class="guide-card" style="background:white; padding:2rem; border-radius:8px; box-shadow:0 2px 15px var(--shadow); border:1px solid rgba(139,115,85,0.15);">
+				<h4 style="font-family:'Playfair Display', serif; font-size:1.3rem; margin-bottom:1rem;">Dónde dormir</h4>
+				<p style="line-height:1.6;">Para los que llegáis desde fuera, recomendamos alojaros cerca del centro de Bilbao o en Abando. Algunos ejemplos:</p>
+				<ul style="line-height:1.6;">
+					<li>Hotel Meliá Bilbao – a 10 min del Guggenheim</li>
+					<li>Hotel Carlton Bilbao – céntrico y clásico</li>
+					<li>Airbnb en el Casco Viejo – ideal para los que quieren pasear por Bilbao</li>
+				</ul>
+			</div>
+
+			<!-- Dónde tomar algo -->
+			<div class="guide-card" style="background:white; padding:2rem; border-radius:8px; box-shadow:0 2px 15px var(--shadow); border:1px solid rgba(139,115,85,0.15);">
+				<h4 style="font-family:'Playfair Display', serif; font-size:1.3rem; margin-bottom:1rem;">Dónde tomar algo</h4>
+				<p style="line-height:1.6;">Si queréis disfrutar de pintxos o un buen café antes o después de la boda:</p>
+				<ul style="line-height:1.6;">
+					<li>Calle Ledesma – bares de pintxos en el Casco Viejo</li>
+					<li>Café Iruña – clásico y emblemático</li>
+					<li>Ribera del Nervión – terraza con vistas al río</li>
+				</ul>
+			</div>
+
+			<!-- Qué ver en Bilbao -->
+			<div class="guide-card" style="background:white; padding:2rem; border-radius:8px; box-shadow:0 2px 15px var(--shadow); border:1px solid rgba(139,115,85,0.15);">
+				<h4 style="font-family:'Playfair Display', serif; font-size:1.3rem; margin-bottom:1rem;">Qué ver en Bilbao</h4>
+				<p style="line-height:1.6;">Si tenéis tiempo antes o después de la boda, no os perdáis:</p>
+				<ul style="line-height:1.6;">
+					<li>Museo Guggenheim – arte contemporáneo y arquitectura icónica</li>
+					<li>Casco Viejo – calles empedradas, tiendas y bares de pintxos</li>
+					<li>Puente Zubizuri – paseo romántico sobre el Nervión</li>
+					<li>Parque Doña Casilda – perfecto para un paseo tranquilo</li>
+				</ul>
+			</div>
+
 		</div>
 	</section>
 
@@ -928,5 +966,7 @@
 	<!-- ejemplo mínimo de estilo para el feedback -->
 	.copy-feedback { opacity: 0; transition: opacity .2s; }
 	.copy-feedback.show { opacity: 1; }
+	
+	<script src="theme.js"></script>
 </body>
 </html>
